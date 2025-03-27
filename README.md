@@ -7,9 +7,38 @@ The setup is designed to work seamlessly on both Linux and Windows operating sys
 # Astro CLI features
 With the Astro CLI, you can:
 
-Run Airflow on your local machine in minutes.
-Parse, debug, and test DAGs in a dedicated testing environment.
-Manage your Astro resources, including Workspaces and Deployments.
+* Run Airflow on your local machine in minutes.
+* Parse, debug, and test DAGs in a dedicated testing environment.
+* Manage your Astro resources, including Workspaces and Deployments.
+
+![image](https://github.com/user-attachments/assets/a5d2a021-4c61-403a-981c-f57915096f28)
+
+
+# Project Structure
+``` bash
++---dbt-dag
+|   |   Dockerfile
+|   +---dags
+|   |   +---dbt
+|   |   |   \---data_pipeline
+|   |   |       +---analyses  
+|   |   |       +---dbt_packages
+|   |   |       |   +---codegen
+|   |   |       |   \---dbt_utils               
+|   |   |       +---logs
+|   |   |       +---macros   
+|   |   |       +---models
+|   |   |       |   +---marts
+|   |   |       |   |   |   
+|   |   |       |   |   \---int       
+|   |   |       |   \---staging    
+|   |   |       +---seeds
+|   |   |       +---snapshots
+|   |   |       +---target   
+|   |   |       \---tests
+|       \---dags     
+\---logs
+```
 
 
 # dbt Macros
